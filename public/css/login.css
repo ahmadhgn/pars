@@ -411,23 +411,17 @@ body {
     color:#7a6b4b;
 }
 
-.password-eye {
+.password-eye{
 
-    position: absolute;
+    position:absolute;
 
-    left: 18px;
+    left:15px;
 
-    top: 50%;
+    top:50%;
 
-    transform: translateY(-50%);
+    transform:translateY(-50%);
 
-    cursor: pointer;
-
-    font-size: 22px;
-
-    color: #7a6b4b;
-
-    user-select: none;
+    z-index:20;
 }
 
 .password-eye:hover {
@@ -464,4 +458,7 @@ body {
     color:#587321;
 
     font-weight:bold;
+}
+.input-group{
+    position:relative;
 }
