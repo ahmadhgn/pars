@@ -1,0 +1,35 @@
+:root{
+
+    /* رنگ های اصلی */
+
+    --color-primary:#5b8f2d;
+    --color-primary-hover:#6fa93a;
+
+    --color-bg:#f3e5c6;
+
+    --color-border:#8b6f47;
+
+    --color-text:#2f2417;
+
+    --color-shadow:rgba(0,0,0,.25);
+
+    /* فاصله ها */
+
+    --space-xs:6px;
+    --space-sm:12px;
+    --space-md:20px;
+    --space-lg:30px;
+    --space-xl:50px;
+
+    /* گوشه ها */
+
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:20px;
+
+    /* سایه */
+
+    --shadow-main:
+    0 10px 30px rgba(0,0,0,.25);
+
+}
