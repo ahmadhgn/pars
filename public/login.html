@@ -39,18 +39,55 @@
                     <img src="/images/logo.png" alt="امپراتوری پارس">
                 </div>
                 <div class="panel-banner">
-                    ورود به سرور
+                    <img src="/images/server-login-bg.png" alt="ورود به سرور">
                 </div>
 
                 <form id="loginForm">
 
-                    <input id="username" type="text" placeholder="نام کاربری">
+                    <div class="input-group">
 
-                    <input id="password" type="password" placeholder="رمز عبور">
+                        <span class="icon">👤</span>
 
-                    <button type="submit">ورود</button>
+                        <input id="username" type="text" placeholder="نام کاربری خود را وارد کنید">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <span class="icon">🔒</span>
+
+                        <input id="password" type="password" placeholder="رمز عبور خود را وارد کنید">
+
+                        <span id="togglePassword" class="password-eye">
+
+                            👁
+
+                        </span>
+
+                    </div>
+
+                    <button type="submit">
+                        ورود
+                    </button>
 
                 </form>
+                <div class="forgot-password">
+                    رمز عبور خود را فراموش کرده‌اید؟
+                </div>
+
+                <div class="register-section">
+
+                    <div class="separator"></div>
+
+                    <p>حساب کاربری ندارید؟</p>
+
+                    <button id="registerBtn" type="button" class="register-btn">
+
+                        ثبت نام کنید
+
+                    </button>
+
+                </div>
 
             </div>
 

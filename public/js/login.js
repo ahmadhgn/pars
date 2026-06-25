@@ -59,3 +59,46 @@ document
             }
         }
     );
+
+    const togglePassword =
+    document.getElementById(
+        "togglePassword"
+    );
+
+const passwordInput =
+    document.getElementById(
+        "password"
+    );
+
+togglePassword.addEventListener(
+    "click",
+    () => {
+
+        if (
+            passwordInput.type ===
+            "password"
+        ) {
+
+            passwordInput.type =
+                "text";
+
+        } else {
+
+            passwordInput.type =
+                "password";
+        }
+    }
+);
+
+document
+    .getElementById(
+        "registerBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            window.location =
+                "/auth/register";
+        }
+    );

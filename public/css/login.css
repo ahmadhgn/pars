@@ -209,7 +209,7 @@ body {
 
     box-sizing: border-box;
 
-    padding-top: 185px;
+    padding-top: 230px;
 }
 
 /* =========================
@@ -249,7 +249,7 @@ body {
 #loginForm input {
 
     width: 74%;
-    height: 56px;
+    height: 60px;
 
     box-sizing: border-box;
 
@@ -264,7 +264,7 @@ body {
     background: rgba(255,255,255,.88);
 
     font-family: IRANSansWeb;
-    font-size: 15px;
+    font-size: 20px;
 
     outline: none;
 
@@ -328,39 +328,30 @@ body {
 
     position: absolute;
 
-    top: 110px;
+    top: 120px;
 
     left: 50%;
 
     transform: translateX(-50%);
 
-    width: 260px;
-    height: 58px;
+    z-index: 50;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    pointer-events: none;
+}
 
-    background:
-        linear-gradient(
-            to bottom,
-            #6d8f2f,
-            #4d681f
+.panel-banner img {
+
+    width: 360px;
+
+    height: auto;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 8px 18px
+            rgba(0,0,0,.35)
         );
-
-    border: 3px solid #7d6429;
-
-    border-radius: 6px;
-
-    color: #fff;
-
-    font-size: 20px;
-    font-weight: 700;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.35);
-
-    z-index: 30;
 }
 
 /* =========================
@@ -390,4 +381,87 @@ body {
     #loginForm button {
         width: 82%;
     }
+}
+
+.input-group{
+
+    width:84%;
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-group input{
+
+    width:100%;
+    padding-right:55px;
+}
+
+.icon{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:22px;
+
+    color:#7a6b4b;
+}
+
+.password-eye {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    color: #7a6b4b;
+
+    user-select: none;
+}
+
+.password-eye:hover {
+
+    color: #4e6b1d;
+}
+
+.register-section{
+
+    margin-top:35px;
+
+    text-align:center;
+}
+
+.separator{
+
+    width:240px;
+
+    height:1px;
+
+    background:#d8c49a;
+
+    margin:0 auto 20px;
+}
+
+.register-btn{
+
+    width:260px;
+
+    background:none;
+
+    border:2px solid #7c9f3d;
+
+    color:#587321;
+
+    font-weight:bold;
 }
