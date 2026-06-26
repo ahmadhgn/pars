@@ -1,18 +1,32 @@
-.dialog-overlay{
+.dialog{
 
     position:fixed;
 
     inset:0;
 
-    display:none;
+    display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    background:rgba(0,0,0,.45);
-
     z-index:9999;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.dialog-shadow{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
 
 }
 
@@ -20,7 +34,7 @@
 
     position:relative;
 
-    width:720px;
+    width:640px;
 
     min-height:420px;
 
@@ -28,47 +42,30 @@
 
     background-size:100% 100%;
 
-    padding:70px 40px 40px;
+    padding:80px 40px 40px;
 
     box-sizing:border-box;
 
+    z-index:2;
 }
 
 .dialog-header{
 
     position:absolute;
 
-    top:-22px;
+    top:-28px;
 
     left:50%;
 
     transform:translateX(-50%);
 
-}
+    width:420px;
 
-.dialog-header img{
+    height:70px;
 
-    display:block;
+    background:url('/images/ui/dialogs/dialog-header.png');
 
-}
-
-#dialogTitle{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:26px;
-
-    color:#f3dd9d;
-
-    font-weight:bold;
+    background-size:100% 100%;
 
 }
 
@@ -78,11 +75,21 @@
 
     left:-18px;
 
-    top:12px;
+    top:18px;
 
-    width:36px;
+    width:42px;
+
+    height:42px;
+
+    border:none;
 
     cursor:pointer;
+
+    background:url('/images/ui/dialogs/dialog-close.png');
+
+    background-size:100%;
+
+    background-repeat:no-repeat;
 
 }
 
@@ -90,35 +97,27 @@
 
     min-height:220px;
 
-    color:#3d2f16;
-
-    font-size:20px;
-
 }
 
 .dialog-footer{
-
-    margin-top:30px;
 
     display:flex;
 
     justify-content:center;
 
+    margin-top:30px;
+
 }
 
-.dialog-btn{
+.dialog-button{
 
-    width:190px;
+    width:220px;
 
-    height:58px;
+    height:60px;
 
     border:none;
 
     cursor:pointer;
-
-    color:white;
-
-    font-size:20px;
 
     background:url('/images/ui/dialogs/dialog-button.png');
 
@@ -126,10 +125,8 @@
 
 }
 
-.dialog-btn:hover{
+.dialog-button:hover{
 
-    background:url('/images/ui/dialogs/dialog-button-hover.png');
-
-    background-size:100% 100%;
+    background-image:url('/images/ui/dialogs/dialog-button-hover.png');
 
 }

@@ -1,24 +1,22 @@
 const dialog = document.getElementById("gameDialog");
 
-const dialogClose = document.getElementById("dialogClose");
+const closeBtn = document.getElementById("dialogClose");
+
+closeBtn.onclick = () => {
+
+    dialog.classList.add("hidden");
+
+};
 
 function openDialog(title, html){
 
     document.getElementById("dialogTitle").innerHTML = title;
 
-    document.querySelector(".dialog-body").innerHTML = html;
+    document.getElementById("dialogBody").innerHTML = html;
 
-    dialog.style.display="flex";
-
-}
-
-function closeDialog(){
-
-    dialog.style.display="none";
+    dialog.classList.remove("hidden");
 
 }
-
-dialogClose.onclick = closeDialog;
 
 setTimeout(()=>{
 
@@ -26,13 +24,7 @@ setTimeout(()=>{
 
         "خوش آمدید",
 
-        `
-        <p style="text-align:center">
-
-        ورود شما به امپراتوری پارس با موفقیت انجام شد.
-
-        </p>
-        `
+        "<p style='text-align:center'>به امپراتوری پارس خوش آمدید.</p>"
 
     );
 
