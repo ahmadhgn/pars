@@ -10,7 +10,7 @@
     <title>امپراتوری پارس | ورود</title>
 
     <link rel="stylesheet" href="/css/fonts.css">
-
+    <link rel="stylesheet" href="/css/dialog.css">
     <link rel="stylesheet" href="/css/login.css">
 
 </head>
@@ -60,7 +60,7 @@
 
                     <div class="input-group">
 
-                        <img src="/images/ui/user.png" class="input-icon-right" alt="user">
+                        <img src="/images/ui/icons/user.png" class="input-icon-right" alt="user">
 
                         <input id="username" type="text" autocomplete="username"
                             placeholder="نام کاربری خود را وارد کنید">
@@ -71,12 +71,12 @@
 
                     <div class="input-group">
 
-                        <img src="/images/ui/lock.png" class="input-icon-right" alt="lock">
+                        <img src="/images/ui/icons/lock.png" class="input-icon-right" alt="lock">
 
                         <input id="password" type="password" autocomplete="current-password"
                             placeholder="رمز عبور خود را وارد کنید">
 
-                        <img src="/images/ui/eye.png" id="togglePassword" class="input-icon-left" alt="eye">
+                        <img src="/images/ui/icons/eye.png" id="togglePassword" class="input-icon-left" alt="eye">
 
                     </div>
 
@@ -112,11 +112,48 @@
             </div>
 
         </div>
+        <!-- GAME DIALOG -->
 
+        <div id="gameDialog" class="dialog-overlay">
+
+            <div class="dialog-window">
+
+                <img src="/images/ui/dialogs/dialog-shadow.png" class="dialog-shadow">
+
+                <div class="dialog-header">
+
+                    <img src="/images/ui/dialogs/dialog-header.png">
+
+                    <span id="dialogTitle">
+
+                        عنوان پنجره
+
+                    </span>
+
+                    <img id="dialogClose" src="/images/ui/dialogs/dialog-close.png" class="dialog-close">
+
+                </div>
+
+                <div class="dialog-body">
+
+                    متن نمونه...
+
+                </div>
+
+                <div class="dialog-footer">
+
+                    <button class="dialog-btn">
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
     </main>
 
     <script src="/js/login.js"></script>
-
+    <script src="/js/dialog.js"></script>
 </body>
 
 </html>

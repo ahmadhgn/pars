@@ -355,7 +355,7 @@ body{
 
     outline:none;
 
-    background:url("/images/ui/input-bg.png")
+    background:url("/images/ui/inputs/text/input-bg.png")
                center center/100% 100% no-repeat;
 
     padding-right:58px;
@@ -459,7 +459,7 @@ body{
     font-weight:700;
 
     background:
-        url("/images/ui/button-green.png")
+        url("/images/ui/buttons/login/button-green.png")
         center center/100% 100% no-repeat;
 
     transition:
@@ -471,7 +471,7 @@ body{
 .login-btn:hover{
 
     background-image:
-        url("/images/ui/button-green-hover.png");
+        url("/images/ui/buttons/login/button-green-hover.png");
 
     transform:translateY(-1px);
 
@@ -480,7 +480,7 @@ body{
 .login-btn:active{
 
     background-image:
-        url("/images/ui/button-green-click.png");
+        url("/images/ui/buttons/login/button-green-click.png");
 
     transform:translateY(1px);
 
@@ -581,7 +581,7 @@ body{
     color:#4a3b1d;
 
     background:
-        url("/images/ui/register-button.png")
+        url("/images/ui/buttons/register/register-button.png")
         center center/100% 100% no-repeat;
 
     transition:
@@ -593,7 +593,7 @@ body{
 .register-btn:hover{
 
     background-image:
-        url("/images/ui/register-button-hover.png");
+        url("/images/ui/buttons/register/register-button-hover.png");
 
     transform:translateY(-1px);
 
