@@ -1,402 +1,394 @@
-/* =========================
-   FONTS
-========================= */
+/*==================================================
+=                     FONTS
+==================================================*/
 
-@font-face {
-    font-family: 'IRANSansWeb';
-    src: url('/fonts/iransans/IRANSansWeb.woff2') format('woff2');
-    font-weight: 400;
+@font-face{
+    font-family:"IRANSansWeb";
+    src:url("/fonts/iransans/IRANSansWeb.woff2") format("woff2");
+    font-weight:400;
 }
 
-@font-face {
-    font-family: 'IRANSansWeb';
-    src: url('/fonts/iransans/IRANSansWeb_Medium.woff2') format('woff2');
-    font-weight: 500;
+@font-face{
+    font-family:"IRANSansWeb";
+    src:url("/fonts/iransans/IRANSansWeb_Medium.woff2") format("woff2");
+    font-weight:500;
 }
 
-@font-face {
-    font-family: 'IRANSansWeb';
-    src: url('/fonts/iransans/IRANSansWeb_Bold.woff2') format('woff2');
-    font-weight: 700;
+@font-face{
+    font-family:"IRANSansWeb";
+    src:url("/fonts/iransans/IRANSansWeb_Bold.woff2") format("woff2");
+    font-weight:700;
 }
 
-/* =========================
-   PAGE
-========================= */
+/*==================================================
+=                     RESET
+==================================================*/
 
-body {
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-    overflow: hidden;
-    font-family: 'IRANSansWeb', sans-serif;
+*{
 
-    opacity: 0;
-    animation: pageFadeIn .8s ease forwards;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
 }
 
-@keyframes pageFadeIn {
-    to {
-        opacity: 1;
-    }
+html,
+body{
+
+    width:100%;
+    height:100%;
+
 }
 
-/* =========================
-   BACKGROUND
-========================= */
+body{
 
-.bg {
-    position: fixed;
-    inset: 0;
+    direction:rtl;
 
-    background:
-        url('/images/backgrounds/login-bg.jpg')
-        center center / cover no-repeat;
+    overflow:hidden;
 
-    animation: bgZoom 20s ease-in-out infinite alternate;
+    font-family:"IRANSansWeb",sans-serif;
+
+    animation:pageFade .8s ease;
+
 }
 
-@keyframes bgZoom {
-    from {
-        transform: scale(1.03);
-    }
+/*==================================================
+=                 PAGE ANIMATION
+==================================================*/
 
-    to {
-        transform: scale(1.08);
-    }
-}
+@keyframes pageFade{
 
-.overlay {
-    position: fixed;
-    inset: 0;
+    from{
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(0,0,0,.15),
-            rgba(0,0,0,.65)
-        );
-}
+        opacity:0;
 
-/* =========================
-   TOP BAR
-========================= */
-
-.top-bar {
-    position: absolute;
-
-    bottom: 12px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    z-index: 100;
-
-    background: rgba(0,0,0,.55);
-
-    border: 1px solid #c9a227;
-
-    color: #f5d77a;
-
-    padding: 8px 18px;
-
-    border-radius: 8px;
-
-    font-size: 13px;
-}
-
-/* =========================
-   WRAPPER
-========================= */
-
-.wrapper {
-    position: relative;
-
-    z-index: 5;
-
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* =========================
-   PANEL
-========================= */
-
-.panel-wrapper {
-    position: relative;
-
-    width: 500px;
-
-    animation: panelIn .7s ease .3s forwards;
-
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-@keyframes panelIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.panel-bg {
-    width: 100%;
-    display: block;
-    user-select: none;
-}
-
-/* =========================
-   LOGO
-========================= */
-
-.logo-container {
-    position: absolute;
-
-    top: -95px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    z-index: 20;
-}
-
-.logo-container img {
-    width: 310px;
-    height: auto;
-    display: block;
-
-    filter:
-        drop-shadow(
-            0 8px 15px rgba(0,0,0,.45)
-        );
-
-    animation:
-        logoFloat 3s ease-in-out infinite;
-}
-
-@keyframes logoFloat {
-
-    0% {
-        transform: translateY(0);
     }
 
-    50% {
-        transform: translateY(-6px);
+    to{
+
+        opacity:1;
+
     }
 
-    100% {
-        transform: translateY(0);
-    }
 }
 
-/* =========================
-   CONTENT
-========================= */
+/*==================================================
+=                  BACKGROUND
+==================================================*/
 
-.panel-content {
-    position: absolute;
-    inset: 0;
+.bg{
 
-    display: flex;
-    flex-direction: column;
+    position:fixed;
 
-    align-items: center;
+    inset:0;
 
-    box-sizing: border-box;
+    background:url("/images/backgrounds/login-bg.jpg")
+    center center/cover no-repeat;
 
-    padding-top: 230px;
+    animation:bgMove 20s ease-in-out infinite alternate;
+
 }
 
-/* =========================
-   TITLE
-========================= */
+@keyframes bgMove{
 
-.title {
-    width: 100%;
+    from{
 
-    text-align: center;
+        transform:scale(1.03);
 
-    color: #4c3b20;
-
-    font-size: 20px;
-    font-weight: 700;
-
-    margin-bottom: 40px;
-}
-
-/* =========================
-   FORM
-========================= */
-
-#loginForm {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-}
-
-/* =========================
-   INPUTS
-========================= */
-
-#loginForm input {
-
-    width: 74%;
-    height: 60px;
-
-    box-sizing: border-box;
-
-    margin-bottom: 16px;
-
-    padding: 0 18px;
-
-    border-radius: 4px;
-
-    border: 1px solid #c7b082;
-
-    background: rgba(255,255,255,.88);
-
-    font-family: IRANSansWeb;
-    font-size: 20px;
-
-    outline: none;
-
-    transition: .2s;
-}
-
-#loginForm input:focus {
-
-    border-color: #9b7d2d;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(201,162,39,.18);
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-#loginForm button {
-
-    width: 74%;
-    height: 56px;
-
-    margin-top: 8px;
-
-    border: none;
-    border-radius: 4px;
-
-    cursor: pointer;
-
-    font-family: IRANSansWeb;
-    font-size: 18px;
-    font-weight: 700;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #7ca82e,
-            #56791e
-        );
-
-    transition: .2s;
-}
-
-#loginForm button:hover {
-
-    transform: translateY(-1px);
-
-    filter: brightness(1.08);
-}
-
-#loginForm button:active {
-
-    transform: translateY(1px);
-}
-
-.panel-banner {
-
-    position: absolute;
-
-    top: 120px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    z-index: 50;
-
-    pointer-events: none;
-}
-
-.panel-banner img {
-
-    width: 360px;
-
-    height: auto;
-
-    display: block;
-
-    filter:
-        drop-shadow(
-            0 8px 18px
-            rgba(0,0,0,.35)
-        );
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    .panel-wrapper {
-        width: 92%;
-        max-width: 520px;
     }
 
-    .logo-container img {
-        width: 280px;
+    to{
+
+        transform:scale(1.08);
+
     }
 
-    .panel-content {
-        padding-top: 180px;
-    }
-
-    .title {
-        font-size: 18px;
-    }
-
-    #loginForm input,
-    #loginForm button {
-        width: 82%;
-    }
 }
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:radial-gradient(
+
+        circle,
+
+        rgba(0,0,0,.12),
+
+        rgba(0,0,0,.70)
+
+    );
+
+}
+
+/*==================================================
+=                  SERVER BAR
+==================================================*/
+
+.top-bar{
+
+    position:fixed;
+
+    bottom:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:100;
+
+    padding:9px 22px;
+
+    color:#f2d87d;
+
+    border:1px solid #b68d2d;
+
+    border-radius:8px;
+
+    background:rgba(0,0,0,.58);
+
+    font-size:13px;
+
+    backdrop-filter:blur(3px);
+
+}
+
+/*==================================================
+=                  MAIN WRAPPER
+==================================================*/
+
+.wrapper{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==================================================
+=                  PANEL
+==================================================*/
+
+.panel-wrapper{
+
+    position:relative;
+
+    width:460px;
+
+    animation:panelShow .7s ease;
+
+}
+
+@keyframes panelShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+.panel-bg{
+
+    width:100%;
+
+    display:block;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+/*==================================================
+=                    LOGO
+==================================================*/
+
+.logo-container{
+
+    position:absolute;
+
+    top:-110px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:50;
+
+}
+
+.logo-container img{
+
+    width:285px;
+
+    display:block;
+
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.45));
+
+    animation:logoFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+    100%{transform:translateY(0);}
+
+}
+
+/*==================================================
+=                 SERVER BANNER
+==================================================*/
+
+.panel-banner{
+
+    position:absolute;
+
+    top:86px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:40;
+
+    pointer-events:none;
+
+}
+
+.panel-banner img{
+
+    width:320px;
+
+    display:block;
+
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.35));
+
+}
+
+/*==================================================
+=                 PANEL CONTENT
+==================================================*/
+
+.panel-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding-top:185px;
+
+}
+
+/*==================================================
+=                    FORM
+==================================================*/
+
+#loginForm{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/*==================================================
+=                 INPUT GROUP
+==================================================*/
 
 .input-group{
 
-    width:84%;
     position:relative;
-    margin-bottom:18px;
+
+    width:76%;
+
+    margin-bottom:14px;
+
 }
+
+/*==================================================
+=                     INPUT
+==================================================*/
 
 .input-group input{
 
     width:100%;
-    padding-right:55px;
+
+    height:56px;
+
+    border:none;
+
+    outline:none;
+
+    background:url("/images/ui/input-bg.png")
+               center center/100% 100% no-repeat;
+
+    padding-right:58px;
+
+    padding-left:52px;
+
+    font-size:19px;
+
+    color:#4d3b1c;
+
+    font-family:IRANSansWeb;
+
+    transition:.2s;
+
 }
 
-.icon{
+.input-group input::placeholder{
+
+    color:#85704b;
+
+}
+
+.input-group input:focus{
+
+    filter:brightness(1.03);
+
+}
+
+/*==================================================
+=                    ICONS
+==================================================*/
+
+.input-icon-right{
 
     position:absolute;
 
@@ -406,59 +398,316 @@ body {
 
     transform:translateY(-50%);
 
-    font-size:22px;
+    width:24px;
 
-    color:#7a6b4b;
+    height:24px;
+
+    pointer-events:none;
+
 }
 
-.password-eye{
+.input-icon-left{
 
     position:absolute;
 
-    left:15px;
+    left:18px;
 
     top:50%;
 
     transform:translateY(-50%);
 
-    z-index:20;
+    width:24px;
+
+    height:24px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
 }
 
-.password-eye:hover {
+.input-icon-left:hover{
 
-    color: #4e6b1d;
+    transform:translateY(-50%) scale(1.12);
+
 }
 
-.register-section{
+/*==================================================
+=                 LOGIN BUTTON
+==================================================*/
 
-    margin-top:35px;
+.login-btn{
 
-    text-align:center;
+    width:320px;
+
+    height:74px;
+
+    margin-top:6px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    font-family:IRANSansWeb;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    background:
+        url("/images/ui/button-green.png")
+        center center/100% 100% no-repeat;
+
+    transition:
+        transform .15s,
+        filter .15s;
+
 }
+
+.login-btn:hover{
+
+    background-image:
+        url("/images/ui/button-green-hover.png");
+
+    transform:translateY(-1px);
+
+}
+
+.login-btn:active{
+
+    background-image:
+        url("/images/ui/button-green-click.png");
+
+    transform:translateY(1px);
+
+}
+
+/*==================================================
+=             FORGOT PASSWORD
+==================================================*/
+
+.forgot-password{
+
+    margin-top:18px;
+
+    color:#6d5631;
+
+    font-size:15px;
+
+    text-decoration:none;
+
+    transition:.2s;
+
+}
+
+.forgot-password:hover{
+
+    color:#3e8d2b;
+
+}
+
+/*==================================================
+=                SEPARATOR
+==================================================*/
 
 .separator{
 
-    width:240px;
+    width:70%;
 
     height:1px;
 
-    background:#d8c49a;
+    margin:12px 0;
 
-    margin:0 auto 20px;
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #bca06d,
+            transparent
+        );
+
 }
+
+/*==================================================
+=              REGISTER SECTION
+==================================================*/
+
+.register-section{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.register-section p{
+
+    color:#5b4928;
+
+    font-size:16px;
+
+    margin-bottom:6px;
+
+}
+
+/*==================================================
+=             REGISTER BUTTON
+==================================================*/
 
 .register-btn{
 
-    width:260px;
+    width:235px;
 
-    background:none;
+    height:62px;
 
-    border:2px solid #7c9f3d;
+    border:none;
 
-    color:#587321;
+    cursor:pointer;
 
-    font-weight:bold;
+    font-family:IRANSansWeb;
+
+    font-size:21px;
+
+    font-weight:700;
+
+    color:#4a3b1d;
+
+    background:
+        url("/images/ui/register-button.png")
+        center center/100% 100% no-repeat;
+
+    transition:
+        transform .15s,
+        filter .15s;
+
 }
-.input-group{
-    position:relative;
+
+.register-btn:hover{
+
+    background-image:
+        url("/images/ui/register-button-hover.png");
+
+    transform:translateY(-1px);
+
+}
+
+.register-btn:active{
+
+    transform:translateY(1px);
+
+}
+
+/*==================================================
+=               RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .panel-wrapper{
+
+        width:92%;
+        max-width:460px;
+
+    }
+
+    .logo-container{
+
+        top:-75px;
+
+    }
+
+    .logo-container img{
+
+        width:230px;
+
+    }
+
+    .panel-banner{
+
+        top:75px;
+
+    }
+
+    .panel-banner img{
+
+        width:280px;
+
+    }
+
+    .panel-content{
+
+        padding-top:165px;
+
+    }
+
+    .input-group{
+
+        width:82%;
+
+    }
+
+    .login-btn{
+
+        width:280px;
+
+        height:66px;
+
+        font-size:21px;
+
+    }
+
+    .register-btn{
+
+        width:210px;
+
+        height:58px;
+
+        font-size:19px;
+
+    }
+
+}
+
+/*==================================================
+=              SMALL ANIMATIONS
+==================================================*/
+
+.panel-wrapper{
+
+    filter:
+        drop-shadow(
+            0 18px 30px rgba(0,0,0,.35)
+        );
+
+}
+
+.input-group input{
+
+    transition:
+        transform .15s,
+        filter .2s;
+
+}
+
+.input-group input:focus{
+
+    transform:scale(1.01);
+
+    filter:brightness(1.04);
+
+}
+
+.login-btn,
+.register-btn{
+
+    user-select:none;
+
 }

@@ -2,88 +2,108 @@
 <html lang="fa" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>امپراتوری پارس - ورود</title>
+
+    <title>امپراتوری پارس | ورود</title>
+
+    <link rel="stylesheet" href="/css/fonts.css">
 
     <link rel="stylesheet" href="/css/login.css">
 
-    <link href="/css/fonts.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- BACKGROUND -->
+    <!-- Background -->
     <div class="bg"></div>
 
-    <!-- DARK OVERLAY -->
     <div class="overlay"></div>
 
-    <!-- TOP BAR -->
+    <!-- Server Bar -->
     <div class="top-bar">
+
         🏛 امپراتوری پارس | سرور آزمایشی Alpha | آنلاین
+
     </div>
 
-    <!-- MAIN WRAPPER -->
-    <div class="wrapper">
+    <!-- Main -->
+    <main class="wrapper">
 
-
-        <!-- LOGIN PANEL -->
         <div class="panel-wrapper">
 
-            <img src="/images/panel.png" class="panel-bg" alt="panel">
+            <!-- Stone Panel -->
+            <img src="/images/panel.png" class="panel-bg" draggable="false" alt="panel">
 
+            <!-- Logo -->
+            <div class="logo-container">
+
+                <img src="/images/logo.png" alt="Empire">
+
+            </div>
+
+            <!-- Banner -->
+            <div class="panel-banner">
+
+                <img src="/images/server-login-bg.png" alt="ورود">
+
+            </div>
+
+            <!-- Content -->
             <div class="panel-content">
-                <!-- LOGO -->
-                <div class="logo-container">
-                    <img src="/images/logo.png" alt="امپراتوری پارس">
-                </div>
-                <div class="panel-banner">
-                    <img src="/images/server-login-bg.png" alt="ورود به سرور">
-                </div>
 
                 <form id="loginForm">
 
-                    <div class="input-group">
-
-                        <span class="icon">👤</span>
-
-                        <input id="username" type="text" placeholder="نام کاربری خود را وارد کنید">
-
-                    </div>
+                    <!-- Username -->
 
                     <div class="input-group">
 
-                        <span class="icon">🔒</span>
+                        <img src="/images/ui/user.png" class="input-icon-right" alt="user">
 
-                        <input id="password" type="password" placeholder="رمز عبور خود را وارد کنید">
-
-                        <span id="togglePassword" class="password-eye">
-
-                            👁
-
-                        </span>
+                        <input id="username" type="text" autocomplete="username"
+                            placeholder="نام کاربری خود را وارد کنید">
 
                     </div>
 
-                    <button type="submit">
-                        ورود
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <img src="/images/ui/lock.png" class="input-icon-right" alt="lock">
+
+                        <input id="password" type="password" autocomplete="current-password"
+                            placeholder="رمز عبور خود را وارد کنید">
+
+                        <img src="/images/ui/eye.png" id="togglePassword" class="input-icon-left" alt="eye">
+
+                    </div>
+
+                    <!-- Login -->
+
+                    <button class="login-btn" type="submit">
                     </button>
 
                 </form>
-                <div class="forgot-password">
+
+                <a href="#" class="forgot-password">
+
                     رمز عبور خود را فراموش کرده‌اید؟
-                </div>
+
+                </a>
+
+                <div class="separator"></div>
 
                 <div class="register-section">
 
-                    <div class="separator"></div>
+                    <p>
 
-                    <p>حساب کاربری ندارید؟</p>
+                        حساب کاربری ندارید؟
 
-                    <button id="registerBtn" type="button" class="register-btn">
+                    </p>
 
-                        ثبت نام کنید
+                    <button class="register-btn" type="button">
 
                     </button>
 
@@ -93,7 +113,7 @@
 
         </div>
 
-    </div>
+    </main>
 
     <script src="/js/login.js"></script>
 
