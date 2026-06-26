@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>امپراتوری پارس | ورود</title>
-
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/animations.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/dialog.css">
     <link rel="stylesheet" href="/css/login.css">
@@ -112,76 +113,59 @@
             </div>
 
         </div>
-        <!-- GAME DIALOG -->
-
-        <div id="gameDialog" class="dialog-overlay">
-
-            <div class="dialog-window">
-
-                <img src="/images/ui/dialogs/dialog-shadow.png" class="dialog-shadow">
-
-                <div class="dialog-header">
-
-                    <img src="/images/ui/dialogs/dialog-header.png">
-
-                    <span id="dialogTitle">
-
-                        عنوان پنجره
-
-                    </span>
-
-                    <img id="dialogClose" src="/images/ui/dialogs/dialog-close.png" class="dialog-close">
-
-                </div>
-
-                <div class="dialog-body">
-
-                    متن نمونه...
-
-                </div>
-
-                <div class="dialog-footer">
-
-                    <button class="dialog-btn">
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
     </main>
 
     <script src="/js/login.js"></script>
     <script src="/js/dialog.js"></script>
 
-<div id="gameDialog" class="dialog hidden">
+    <!-- ==========================================
+     GAME DIALOG
+========================================== -->
 
-    <div class="dialog-shadow"></div>
+    <div id="gameDialog" class="dialog hidden">
 
-    <div class="dialog-window">
+        <!-- پس زمینه تار -->
 
-        <div class="dialog-header">
+        <div class="dialog-overlay"></div>
 
-            <span id="dialogTitle"></span>
+        <!-- پنجره -->
 
-            <button id="dialogClose" class="dialog-close"></button>
+        <div class="dialog-window">
 
-        </div>
+            <!-- سایه -->
 
-        <div id="dialogBody" class="dialog-body">
+            <img src="/images/ui/dialogs/dialog-shadow.png" class="dialog-shadow" draggable="false" alt="">
 
-        </div>
+            <!-- پنل -->
 
-        <div class="dialog-footer">
+            <img src="/images/ui/dialogs/dialog-panel.png" class="dialog-panel" draggable="false" alt="">
 
-            <button id="dialogOk" class="dialog-button"></button>
+            <!-- هدر -->
+
+            <img src="/images/ui/dialogs/dialog-header.png" class="dialog-header" draggable="false" alt="">
+
+            <!-- دکمه بستن -->
+
+            <button id="dialogClose" class="dialog-close" type="button" aria-label="بستن"></button>
+
+            <!-- عنوان -->
+
+            <div id="dialogTitle" class="dialog-title">
+            </div>
+
+            <!-- متن -->
+
+            <div id="dialogBody" class="dialog-body">
+            </div>
+
+            <!-- دکمه -->
+
+            <button id="dialogButton" class="dialog-button" type="button">
+            </button>
 
         </div>
 
     </div>
-
-</div>
-
 </body>
+
 </html>

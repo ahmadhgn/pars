@@ -1,31 +1,50 @@
-const dialog = document.getElementById("gameDialog");
+// ==========================================
+// GAME DIALOG CONTROLLER
+// مدیریت دیالوگ بازی
+// ==========================================
 
-const closeBtn = document.getElementById("dialogClose");
+document.addEventListener("DOMContentLoaded", () => {
 
-closeBtn.onclick = () => {
+    // گرفتن المان اصلی دیالوگ
+    const dialog = document.getElementById("gameDialog");
 
-    dialog.classList.add("hidden");
+    // دکمه بستن
+    const closeBtn = document.getElementById("dialogClose");
 
-};
+    // اگر المان‌ها وجود نداشتند، کاری نکن
+    if (!dialog || !closeBtn) return;
 
-function openDialog(title, html){
+    // ==========================================
+    // بستن دیالوگ
+    // ==========================================
+    closeBtn.onclick = () => {
 
-    document.getElementById("dialogTitle").innerHTML = title;
+        dialog.classList.add("hidden");
 
-    document.getElementById("dialogBody").innerHTML = html;
+    };
 
-    dialog.classList.remove("hidden");
+    // ==========================================
+    // باز کردن دیالوگ
+    // ==========================================
+    window.openDialog = function (title, html) {
 
-}
+        document.getElementById("dialogTitle").innerHTML = title;
+        document.getElementById("dialogBody").innerHTML = html;
 
-setTimeout(()=>{
+        dialog.classList.remove("hidden");
 
-    openDialog(
+    };
 
-        "خوش آمدید",
+    // ==========================================
+    // تست اولیه (بعد از 1 ثانیه)
+    // ==========================================
+    setTimeout(() => {
 
-        "<p style='text-align:center'>به امپراتوری پارس خوش آمدید.</p>"
+        openDialog(
+            "خوش آمدید",
+            "<p style='text-align:center'>به امپراتوری پارس خوش آمدید.</p>"
+        );
 
-    );
+    }, 1000);
 
-},1000);
+});
